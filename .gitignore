@@ -1,0 +1,9 @@
+target/
+.idea/
+lib/
+*.iws
+*.iml
+*.ipr
+.flattened-pom.xml
+node_modules/
+coverage/

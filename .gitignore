@@ -7,3 +7,4 @@ lib/
 .flattened-pom.xml
 node_modules/
 coverage/
+*.log

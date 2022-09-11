@@ -619,13 +619,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.debugPrintf = void 0;
 const core_1 = __webpack_require__(238);
 const core = __importStar(__webpack_require__(470));
 let getInput = () => ({
-// TODO
+    debug: core.getInput('debug') === 'true'
 });
-let handleOutput = (output) => {
-    // TODO
+let handleOutput = (output = {}) => {
+    Object.keys(output).forEach((key) => core.setOutput(key, output[key]));
+    (0, exports.debugPrintf)('输出变量: ', output);
 };
 try {
     handleOutput((0, core_1.run)(getInput()));
@@ -633,6 +635,12 @@ try {
 catch (error) {
     core.setFailed(error === null || error === void 0 ? void 0 : error.message);
 }
+let debugPrintf = (...args) => {
+    if (getInput().debug) {
+        console.log(...args);
+    }
+};
+exports.debugPrintf = debugPrintf;
 
 
 /***/ }),

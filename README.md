@@ -17,6 +17,10 @@
 - **可选** 如果需要在本地测试 Github Action 可以参考 [nektos/act](https://github.com/nektos/act) 项目, Github
   官方提供了 [actions/toolkit](https://github.com/actions/toolkit) 工具。
 
+### 参考文档
+
+- [github api sample](https://gist.github.com/queq1890/125e74e1fa33397d2508a6ca4badac83)
+
 ## 一些 Github 目录
 
 | 链接   | 用途                                           |

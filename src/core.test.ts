@@ -1,8 +1,7 @@
 jest.mock('@actions/core');
 jest.mock('@actions/github');
-jest.mock('fs');
 
-import core from '@actions/core';
+import * as core from '@actions/core';
 import {run} from './core';
 
 describe('action env [core.js] test', () => {
@@ -17,6 +16,6 @@ describe('action env [core.js] test', () => {
         //     // .mockReturnValueOnce('asset_path')
         //     // .mockReturnValueOnce('asset_name')
         //     .mockReturnValueOnce('asset_content_type');
-        run();
+        run({});
     });
 });

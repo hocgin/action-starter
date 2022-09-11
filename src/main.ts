@@ -2,18 +2,21 @@ import {run} from "./core";
 import * as core from "@actions/core";
 
 export interface Inputs {
+    debug?: boolean;
 }
 
 export interface Outputs {
-
+    // ..
+    [key: string]: any
 }
 
 let getInput = (): Inputs => ({
-    // TODO
+    debug: core.getInput('debug') === 'true'
 })
 
-let handleOutput = (output: Outputs) => {
-    // TODO
+let handleOutput = (output: Outputs = {}) => {
+    Object.keys(output).forEach((key) => core.setOutput(key, output[key]));
+    debugPrintf('输出变量: ', output);
 };
 
 try {
@@ -22,3 +25,8 @@ try {
     core.setFailed(error?.message);
 }
 
+export let debugPrintf = (...args: any) => {
+    if (getInput().debug) {
+        console.log(...args);
+    }
+}

@@ -25,8 +25,9 @@ try {
     core.setFailed(error?.message);
 }
 
-export let debugPrintf = (...args: any) => {
+export function debugPrintf(...args: any) {
     if (getInput().debug) {
         console.log(...args);
     }
 }
+

@@ -19,7 +19,8 @@
 
 ### 参考文档
 
-- [github api sample](https://gist.github.com/queq1890/125e74e1fa33397d2508a6ca4badac83)
+- [Github Api Sample](https://gist.github.com/queq1890/125e74e1fa33397d2508a6ca4badac83)
+- [octokit 文档](https://octokit.github.io/rest.js)
 
 ## 一些 Github 目录
 
@@ -28,3 +29,6 @@
 | [hocgin/action-env](https://github.com/hocgin/action-env) | 根据运行的分支获取部署的目标环境及项目参数                        |
 | [hocgin/action-qiniu-upload](https://github.com/hocgin/action-qiniu-upload) | 用于上传资源文件到七牛 CDN                              |
 | [hocgin/action-use-template](https://github.com/hocgin/action-use-template) | 在使用 `use template repository` 时候，替换模版仓库里面的变量 |
+| [hocgin/action-clear](https://github.com/hocgin/action-clear) | 用于清除 tags / release / workflow |
+| [hocgin/action-wechat-miniprogram-upload](https://github.com/hocgin/action-wechat-miniprogram-upload) | 微信项目自动发布(小程序/小游戏/游戏插件/小程序插件) |
+| [hocgin/action-edge-addone-upload](https://github.com/hocgin/action-edge-addone-upload) | 上传浏览器插件，Microsoft Edge |
